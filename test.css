@@ -125,7 +125,7 @@ body {
 .intro-story {
     font-size: 1.5em;
     font-weight: bold;
-    white-space: pre;
+    white-space: none;
 }
 
 .result-wrap {
