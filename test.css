@@ -1,0 +1,156 @@
+html, button {
+    font-size: 16px;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+}
+
+body {
+    margin: 0;
+}
+
+.title-wrap {
+    display: table;
+    position: relative;
+    width: 100vw;
+    height: 80px;
+}
+
+.title {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.question-wrap {
+    display: table;
+    position: relative;
+    width: 100vw;
+    height: 100px;
+}
+
+.question {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 20px;
+}
+
+.answer-wrap {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+}
+
+.answer {
+    padding: 10px;
+    font-weight: bold;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.controller-wrap {
+    display: table;
+    position: relative;
+    width: 100vw;
+    height: 70px;
+}
+
+.prev-btn {
+    width: 50%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.next-btn {
+    width: 50%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#main::after {
+    content: "";
+    position: absolute;     
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #45a600;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+
+.intro-wrap {
+    display: table;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+    .intro-wrap::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(255, 255, 255);
+        opacity: 0.2;
+        z-index: -1;
+    }
+
+.intro {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.intro-story {
+    font-size: 1.5em;
+    font-weight: bold;
+    white-space: pre;
+}
+
+.result-wrap {
+    display: table;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+    .result-wrap::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: blue;
+        opacity: 0.1;
+        z-index: -1;
+    }
+
+.result {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    white-space: pre;
+    font-size: 1.2em;
+    font-weight: bold;
+}

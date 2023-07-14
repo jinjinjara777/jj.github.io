@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <link rel="stylesheet" href="test.css">
+    <title>당신은 기후변화에 대해 얼마나 알고 있나요?</title>
+    <script src="./jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <div id="test">
+
+        <div id="intro" class="intro-wrap">
+            <div class="intro">
+                <div class="intro-story">
+                    기후변화
+                    ;장기간에 걸친 기간동안 지속되면서, 
+                    기후의 상태나 변동 속에서 통계적으로 
+                    의미있는 변동을 일컫는 말
+                </div>
+            </div>
+        </div>
+
+        <div id="main">
+            <div class="title-wrap">
+                <h2 class="title">
+                     Questions
+                </h2>
+            </div>
+
+            <div class="question-wrap">
+                <h3 class="question">
+                    Let's START!
+                </h3>
+            </div>
+            <div class="answer-wrap">
+                <div class="answer">
+                    <form action="action.jsp">
+                    <p>1. 얼마나 기후변화에 대해 알고 있나요?</p>
+                    <label><input type="radio" name="answer1" value="5"> 매우 </label><br>
+                    <label><input type="radio" name="answer1" value="3"> 보통</label><br>
+                    <label><input type="radio" name="answer1" value="1"> 조금</label><br>
+
+                    <p>2. 기후변화의 원인으로 맞지 않는 것은?</p>
+                    <label><input type="radio" name="answer2" value="0"> 태양 복사에너지의 변화 </label><br>
+                    <label><input type="radio" name="answer2" value="0"> 인간의 화석연료 사용</label><br>
+                    <label><input type="radio" name="answer2" value="1"> 지구 복사에너지의 변화</label><br>
+
+                    <p>3. 기후변화의 영향과 상관이 없는 것은?</p>
+                    <label><input type="radio" name="answer3" value="0"> 사라진 꿀벌들</label><br>
+                    <label><input type="radio" name="answer3" value="0"> 주거권을 잃은 사람들</label><br>
+                    <label><input type="radio" name="answer3" value="1"> 테러로 인한 사망사건들</label><br>
+
+                    <p>4. 기후변화 대응 방법으로 옳은 것은?</p>
+                    <label><input type="radio" name="answer4" value="0"> 잘 분해가 안되는 텀블러 대신 종이컵을 쓴다.</label><br>
+                    <label><input type="radio" name="answer4" value="1"> 물건을 구매할때 친환경 제품을 구입한다</label><br>
+                    <label><input type="radio" name="answer4" value="0"> 채식 식단 구성으로 입맛을 줄여 음식을 낭비하지 않는다</label><br>
+
+                    <p>5. 시민의 노력이 기온 상승 억제에 직접 미치는 영향정도</p>
+                    <label><input type="radio" name="answer5" value="0"> 2 ~ 7%</label><br>
+                    <label><input type="radio" name="answer5" value="1"> 25 ~ 27%</label><br>
+                    <label><input type="radio" name="answer5" value="0"> 45 ~ 52%</label><br>
+
+                    <p>6. 지속가능한 발전을 추구하는 뜻이 아닌 단어는?</p>
+                    <label><input type="radio" name="answer6" value="1"> EA</label><br>
+                    <label><input type="radio" name="answer6" value="0"> ESG</label><br>
+                    <label><input type="radio" name="answer6" value="0"> SDGs</label><br>
+                    </form>
+                    <pre>
+
+
+
+                        <button onclick='result()'>클릭하고 결과보기</button>
+                    </pre>
+
+                    
+                    <script>
+                        function result() {
+                            var q1 = parseInt($('input[name="answer1"]:checked').val());
+                            var q2 = parseInt($('input[name="answer2"]:checked').val());
+                            var q3 = parseInt($('input[name="answer3"]:checked').val());
+                            var q4 = parseInt($('input[name="answer4"]:checked').val());
+                            var q5 = parseInt($('input[name="answer5"]:checked').val());
+                            var q6 = parseInt($('input[name="answer6"]:checked').val());
+
+                            var tot = q2 + q3 + q4 + q5 + q6;
+
+                             if (tot >4 ) {
+                                window.location.href = "http://www.google.com"; // Redirect to the result page
+                            } else if (2 < tot < 5) {
+                                window.location.href = "http://www.youtube.com"; // Redirect to another page
+                            }
+                            else if (1 < tot < 3) {
+                                window.location.href = "http://www.youtube.com"; // Redirect to another page
+                            } else {
+                                window.location.href = "http://www.google.com"; // Redirect to the result page
+                            }
+                        }
+                    </script>
+                    
+                   
+                </div>
+            </div>    
+        <script src="test.js"></script>
+</body>
+</html>
+
+
