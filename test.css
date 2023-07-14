@@ -104,6 +104,7 @@ body {
 }
 
     .intro-wrap::after {
+        text-align: left;
         content: "";
         position: absolute;
         left: 0;
